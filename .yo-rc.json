@@ -24,7 +24,7 @@
     "cacheProvider": "ehcache",
     "enableHibernateCache": true,
     "databaseType": "sql",
-    "devDatabaseType": "h2Disk",
+    "devDatabaseType": "postgresql",
     "prodDatabaseType": "postgresql",
     "buildTool": "maven",
     "serverSideOptions": [],
@@ -42,6 +42,8 @@
     "clientPackageManager": "npm",
     "clientThemeVariant": "",
     "enableGradleEnterprise": false,
-    "languages": ["en", "fr"]
+    "languages": ["en", "fr"],
+    "lastLiquibaseTimestamp": 1645520858000,
+    "entities": ["Report"]
   }
 }
