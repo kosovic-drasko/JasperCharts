@@ -23,9 +23,9 @@ public class Report {
     @Autowired
     ReportRepository reportRepository;
 
-    @GetMapping(path = "/reports}")
+    @GetMapping(path = "/api/reportsi}")
     @ResponseBody
-    public void getPdfUgovor(HttpServletResponse response) throws Exception {
+    public void getPdfReport(HttpServletResponse response) throws Exception {
         Resource resource = context.getResource("classpath:reports/ReportProba.jrxml");
         InputStream inputStream = resource.getInputStream();
         JasperReport report = JasperCompileManager.compileReport(inputStream);
@@ -34,7 +34,6 @@ public class Report {
         //Data source Set
         JRDataSource dataSource = new JRBeanCollectionDataSource(reports);
         params.put("datasource", dataSource);
-
         //Make jasperPrint
         JasperPrint jasperPrint = JasperFillManager.fillReport(report, params, dataSource);
         //Media Type

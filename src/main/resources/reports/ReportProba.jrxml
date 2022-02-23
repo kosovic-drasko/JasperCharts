@@ -1,57 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportProba" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="2e7b09b3-0fde-49d3-9f73-a6725e8b1caa">
-	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
-	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
-	<queryString language="SQL">
-		<![CDATA[select * from report]]>
-	</queryString>
-	<field name="id" class="java.lang.Long">
-		<property name="com.jaspersoft.studio.field.name" value="id"/>
-		<property name="com.jaspersoft.studio.field.label" value="id"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="report"/>
-	</field>
-	<field name="region" class="java.lang.String">
-		<property name="com.jaspersoft.studio.field.name" value="region"/>
-		<property name="com.jaspersoft.studio.field.label" value="region"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="report"/>
-	</field>
-	<field name="prodato" class="java.lang.Integer">
-		<property name="com.jaspersoft.studio.field.name" value="prodato"/>
-		<property name="com.jaspersoft.studio.field.label" value="prodato"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="report"/>
-	</field>
-	<background>
-		<band splitType="Stretch"/>
-	</background>
-	<summary>
-		<band height="526" splitType="Stretch">
-			<barChart>
-				<chart evaluationTime="Report">
-					<reportElement x="96" y="40" width="354" height="450" uuid="f2eb8175-88ba-4b02-bd93-f9f63d38c393"/>
-					<chartTitle/>
-					<chartSubtitle/>
-					<chartLegend/>
-				</chart>
-				<categoryDataset>
-					<dataset resetType="Report"/>
-					<categorySeries>
-						<seriesExpression><![CDATA["SERIES 1"]]></seriesExpression>
-						<categoryExpression><![CDATA[0]]></categoryExpression>
-						<valueExpression><![CDATA[0]]></valueExpression>
-					</categorySeries>
-				</categoryDataset>
-				<barPlot>
-					<plot/>
-					<itemLabel/>
-					<categoryAxisFormat>
-						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
-					</categoryAxisFormat>
-					<valueAxisFormat>
-						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
-					</valueAxisFormat>
-				</barPlot>
-			</barChart>
-		</band>
-	</summary>
+    <property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+    <property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter "/>
+    <queryString language="SQL">
+        <![CDATA[select * from report]]>
+    </queryString>
+    <field name="id" class="java.lang.Long">
+        <property name="com.jaspersoft.studio.field.name" value="id"/>
+        <property name="com.jaspersoft.studio.field.label" value="id"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="report"/>
+    </field>
+    <field name="region" class="java.lang.String">
+        <property name="com.jaspersoft.studio.field.name" value="region"/>
+        <property name="com.jaspersoft.studio.field.label" value="region"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="report"/>
+    </field>
+    <field name="prodato" class="java.lang.Integer">
+        <property name="com.jaspersoft.studio.field.name" value="prodato"/>
+        <property name="com.jaspersoft.studio.field.label" value="prodato"/>
+        <property name="com.jaspersoft.studio.field.tree.path" value="report"/>
+    </field>
+    <background>
+        <band splitType="Stretch"/>
+    </background>
+    <detail>
+        <band height="212">
+            <textField>
+                <reportElement x="0" y="0" width="185" height="30" uuid="14bd3a13-3740-43fe-bcc1-b09dbc9cfec6"/>
+                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="185" y="0" width="185" height="30" uuid="512c2e02-45ac-4b6b-b7c0-b5b7baca1d8e"/>
+                <textFieldExpression><![CDATA[$F{region}]]></textFieldExpression>
+            </textField>
+            <textField>
+                <reportElement x="370" y="0" width="185" height="30" uuid="8f253d7b-5a2b-4d55-a415-1e501a81e9bd"/>
+                <textFieldExpression><![CDATA[$F{prodato}]]></textFieldExpression>
+            </textField>
+        </band>
+    </detail>
 </jasperReport>
