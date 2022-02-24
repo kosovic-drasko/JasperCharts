@@ -12,9 +12,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.core.io.Resource;
 import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = ("*"))
+@RestController
+@RequestMapping("api/report")
 public class Report {
 
     @Autowired
@@ -23,7 +25,7 @@ public class Report {
     @Autowired
     ReportRepository reportRepository;
 
-    @GetMapping(path = "/api/reportsi}")
+    @GetMapping(path = "/proba")
     @ResponseBody
     public void getPdfReport(HttpServletResponse response) throws Exception {
         Resource resource = context.getResource("classpath:reports/ReportProba.jrxml");
