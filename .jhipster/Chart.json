@@ -1,0 +1,9 @@
+{
+  "fields": [],
+  "relationships": [],
+  "service": "no",
+  "readOnly": true,
+  "pagination": "no",
+  "name": "Chart",
+  "changelogDate": "20220225083417"
+}

@@ -24,20 +24,26 @@
     <background>
         <band splitType="Stretch"/>
     </background>
-    <detail>
-        <band height="212">
-            <textField>
-                <reportElement x="0" y="0" width="185" height="30" uuid="14bd3a13-3740-43fe-bcc1-b09dbc9cfec6"/>
-                <textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
-            </textField>
-            <textField>
-                <reportElement x="185" y="0" width="185" height="30" uuid="512c2e02-45ac-4b6b-b7c0-b5b7baca1d8e"/>
-                <textFieldExpression><![CDATA[$F{region}]]></textFieldExpression>
-            </textField>
-            <textField>
-                <reportElement x="370" y="0" width="185" height="30" uuid="8f253d7b-5a2b-4d55-a415-1e501a81e9bd"/>
-                <textFieldExpression><![CDATA[$F{prodato}]]></textFieldExpression>
-            </textField>
+    <summary>
+        <band height="297" splitType="Stretch">
+            <pie3DChart>
+                <chart evaluationTime="Report">
+                    <reportElement x="136" y="90" width="200" height="200" uuid="18fd615a-94a3-41cf-888c-ab02419e9eec"/>
+                    <chartTitle/>
+                    <chartSubtitle/>
+                    <chartLegend/>
+                </chart>
+                <pieDataset>
+                    <dataset resetType="Report"/>
+                    <keyExpression><![CDATA[$F{region}]]></keyExpression>
+                    <valueExpression><![CDATA[$F{prodato}]]></valueExpression>
+                    <labelExpression><![CDATA[$F{prodato}.toString()]]></labelExpression>
+                </pieDataset>
+                <pie3DPlot>
+                    <plot/>
+                    <itemLabel/>
+                </pie3DPlot>
+            </pie3DChart>
         </band>
-    </detail>
+    </summary>
 </jasperReport>
