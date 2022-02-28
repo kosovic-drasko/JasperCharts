@@ -54,8 +54,21 @@
               <span>Report</span>
             </a>
           </li>
+          <li>
+            <a
+              class="dropdown-item"
+              routerLink="grafikon"
+              routerLinkActive="active"
+              [routerLinkActiveOptions]="{ exact: true }"
+              (click)="collapseNavbar()"
+            >
+              <fa-icon icon="asterisk" [fixedWidth]="true"></fa-icon>
+              <span>Chart</span>
+            </a>
+          </li>
         </ul>
       </li>
+
       <li
         *jhiHasAnyAuthority="'ROLE_ADMIN'"
         ngbDropdown

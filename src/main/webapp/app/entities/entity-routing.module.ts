@@ -10,6 +10,12 @@ import { RouterModule } from '@angular/router';
         loadChildren: () => import('./report/report.module').then(m => m.ReportModule),
       },
 
+      {
+        path: 'grafikon',
+        data: { pageTitle: 'Grafikons' },
+        loadChildren: () => import('./grafikon/grafikon.module').then(m => m.GrafikonModule),
+      },
+
       /* jhipster-needle-add-entity-route - JHipster will add entity modules routes here */
     ]),
   ],
