@@ -85,6 +85,7 @@
     "@ng-bootstrap/ng-bootstrap": "10.0.0",
     "apexcharts": "^3.33.1",
     "bootstrap": "4.6.0",
+    "chart.js": "^3.7.1",
     "dayjs": "1.10.7",
     "ng-apexcharts": "^1.7.0",
     "ngx-infinite-scroll": "10.0.1",
