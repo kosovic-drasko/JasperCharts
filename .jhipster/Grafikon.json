@@ -1,0 +1,18 @@
+{
+  "fields": [
+    {
+      "fieldName": "region",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "prodaja",
+      "fieldType": "Integer"
+    }
+  ],
+  "relationships": [],
+  "service": "no",
+  "readOnly": true,
+  "pagination": "no",
+  "name": "Grafikon",
+  "changelogDate": "20220228063045"
+}
