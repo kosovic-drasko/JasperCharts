@@ -14,6 +14,7 @@
         }
       },
       "root": "",
+
       "sourceRoot": "src/main/webapp",
       "prefix": "jhi",
       "architect": {
